@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>トランプcheck</title>
+
+    <script type="text/javascript"> 
+
+        function allwhite() {
+            for (var j = 1; j <= 13; j++) {
+                var lineName = 'L' + j;
+                var cnode = document.getElementById(lineName);
+                ch = cnode.childNodes;
+                for (var i = 0; i < ch.length; i += 2) {
+                    //alert(ch[i]);
+                    ch[i].style.backgroundColor = '#FFFFFF';
+                }
+            }
+        }
+
+        function changeColor(data) {
+            var flag = 0;
+            //alert(data.style.backgroundColor);
+            // カラーコードは代入はできるが真偽値で使うときは注意
+
+            switch (data.style.backgroundColor) {
+                case 'rgb(88, 250, 244)':
+                    if (flag == 0) {
+                        data.style.backgroundColor = '#BCF5A9';
+                        flag = 1;
+                    }
+                    break;
+                case 'rgb(188, 245, 169)':
+                    if (flag == 0) {
+                        data.style.backgroundColor = '#F5A9A9';
+                        flag = 1;
+                    }
+                    break;
+                case 'rgb(245, 169, 169)':
+                    if (flag == 0) {
+                        data.style.backgroundColor = '#FFFFFF';
+                        flag = 1;
+                    }
+                    break;
+                default:
+                    if (flag == 0) {
+                        data.style.backgroundColor = '#58FAF4'
+                        flag = 1;
+                    }
+                    break;
+            }
+
+            //if (data.style.background == '#FFFFFF') data.style.background = '#58FAF4';
+            //if (data.style.background == '#58FAF4') data.style.background = '#F5A9A9';
+            //if (data.style.background == '#F5A9A9') data.style.background = '#FFFFFF';
+            //data.style.background = '#F5A9A9';
+        }
+
+    </script>
+</head>
+<body>
+    <h1 align="center">トランプcheck</h1>
+    <br />
+
+    <table id="ta" border="1" width="100%" style="table-layout:auto; background-color:#FFFFFF">
+            <tr>
+                <th><font color="red">ハート</font></th>
+                <th><font color="red">ダイヤ</font></th>
+                <th>スペード</th>
+                <th>クローバー</th>
+            </tr>
+            <tr id="L1"><td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9829;A</font></td> <td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9830;A</font></td> <td align="center" height='35px' onclick="changeColor(this)">&#9824;A</td> <td align="center" height='35px' onclick="changeColor(this)">&#9827;A</td></tr>
+            <tr id="L2"><td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9829;2</font></td> <td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9830;2</font></td> <td align="center" height='35px' onclick="changeColor(this)">&#9824;2</td> <td align="center" height='35px' onclick="changeColor(this)">&#9827;2</td></tr>
+            <tr id="L3"><td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9829;3</font></td> <td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9830;3</font></td> <td align="center" height='35px' onclick="changeColor(this)">&#9824;3</td> <td align="center" height='35px' onclick="changeColor(this)">&#9827;3</td></tr>
+            <tr id="L4"><td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9829;4</font></td> <td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9830;4</font></td> <td align="center" height='35px' onclick="changeColor(this)">&#9824;4</td> <td align="center" height='35px' onclick="changeColor(this)">&#9827;4</td></tr>
+            <tr id="L5"><td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9829;5</font></td> <td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9830;5</font></td> <td align="center" height='35px' onclick="changeColor(this)">&#9824;5</td> <td align="center" height='35px' onclick="changeColor(this)">&#9827;5</td></tr>
+            <tr id="L6"><td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9829;6</font></td> <td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9830;6</font></td> <td align="center" height='35px' onclick="changeColor(this)">&#9824;6</td> <td align="center" height='35px' onclick="changeColor(this)">&#9827;6</td></tr>
+            <tr id="L7"><td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9829;7</font></td> <td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9830;7</font></td> <td align="center" height='35px' onclick="changeColor(this)">&#9824;7</td> <td align="center" height='35px' onclick="changeColor(this)">&#9827;7</td></tr>
+            <tr id="L8"><td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9829;8</font></td> <td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9830;8</font></td> <td align="center" height='35px' onclick="changeColor(this)">&#9824;8</td> <td align="center" height='35px' onclick="changeColor(this)">&#9827;8</td></tr>
+            <tr id="L9"><td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9829;9</font></td> <td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9830;9</font></td> <td align="center" height='35px' onclick="changeColor(this)">&#9824;9</td> <td align="center" height='35px' onclick="changeColor(this)">&#9827;9</td></tr>
+            <tr id="L10"><td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9829;10</font></td> <td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9830;10</font></td> <td align="center" height='35px' onclick="changeColor(this)">&#9824;10</td> <td align="center" height='35px' onclick="changeColor(this)">&#9827;10</td></tr>
+            <tr id="L11"><td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9829;J</font></td> <td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9830;J</font></td> <td align="center" height='35px' onclick="changeColor(this)">&#9824;J</td> <td align="center" height='35px' onclick="changeColor(this)">&#9827;J</td></tr>
+            <tr id="L12"><td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9829;Q</font></td> <td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9830;Q</font></td> <td align="center" height='35px' onclick="changeColor(this)">&#9824;Q</td> <td align="center" height='35px' onclick="changeColor(this)">&#9827;Q</td></tr>
+            <tr id="L13"><td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9829;K</font></td> <td align="center" height='35px' onclick="changeColor(this)"><font color="red">&#9830;K</font></td> <td align="center" height='35px' onclick="changeColor(this)">&#9824;K</td> <td align="center" height='35px' onclick="changeColor(this)">&#9827;K</td></tr>
+
+
+    </table>
+    <br />
+    <input type="button" value="元に戻す" style="padding:15px;width:100%;font-size:30px" onclick="allwhite()" />
+</body>
+</html>
